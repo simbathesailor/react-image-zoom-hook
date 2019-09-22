@@ -1,44 +1,209 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Image zoom react hook.
 
-## Available Scripts
+### Default View Example
 
-In the project directory, you can run:
+```javascript
+/**
 
-### `npm start`
+* Example of default view
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+*/
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+function DefaultZoomApp() {
+  /**
 
-### `npm test`
+* Necessary inputs for useImageZoomHook
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*/
 
-### `npm run build`
+  const meshRef = React.useRef(null);
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  const imageContainerRef = React.useRef(null);
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+  const imgRef = React.useRef(null);
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  const imagePreviewRef = React.useRef(null); /**
 
-### `npm run eject`
+* The ratio of lens height and width on main image and the zoom image also
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* should remain same for correct working.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*/
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  const imgHeight = 600;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  const imgWidth = 500;
 
-## Learn More
+  const lensHeight = 100;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  const lensWidth = 100;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  const previewLensHeight = 600;
+
+  const img =
+    "https://rukminim1.flixcart.com/image/880/1056/jw6pifk0/t-shirt/e/v/z/m-61ywn-lewel-original-imafgxd7dfg7uub2.jpeg?q=50";
+
+  const previewImg =
+    "https://rukminim1.flixcart.com/image/880/1056/jw6pifk0/t-shirt/e/v/z/m-61ywn-lewel-original-imafgxd7dfg7uub2.jpeg?q=90";
+
+  const {
+    // moveLens,
+
+    // imgDimesions,
+
+    // lensDimensions,
+
+    // previewLensDimensions,
+
+    // previewImgDimensions,
+
+    // imgContainerDimesions,
+
+    DefaultView
+  } = useImageZoom({
+    meshRef,
+
+    imgRef,
+
+    imagePreviewRef,
+
+    imgHeight,
+
+    imgWidth,
+
+    lensHeight,
+
+    lensWidth,
+
+    previewLensHeight,
+
+    img,
+
+    previewImg
+  }); /**
+
+* Two images are involved here, user need to have a actual image and
+
+* one good quality image with higher resolution
+
+*/
+
+  return <div className="container">{DefaultView}</div>;
+}
+```
+
+### Custom Zoom Example
+
+```javascript
+/**
+ * Example of customized zooming
+ */
+
+function AppWithZoomCustomization() {
+  /**
+   * Necessary inputs for useImageZoomHook
+   */
+
+  const meshRef = React.useRef(null);
+  const imageContainerRef = React.useRef(null);
+  const imgRef = React.useRef(null);
+  const imagePreviewRef = React.useRef(null);
+  /**
+   * The  ratio of lens height and width on main image and the zoom image also
+   * should remain same for correct working.
+   */
+  const imgHeight = 600;
+  const imgWidth = 500;
+  const lensHeight = 100;
+  const lensWidth = 100;
+  const previewLensHeight = 600;
+  const img =
+    "https://rukminim1.flixcart.com/image/880/1056/jw6pifk0/t-shirt/e/v/z/m-61ywn-lewel-original-imafgxd7dfg7uub2.jpeg?q=50";
+  const previewImg =
+    "https://rukminim1.flixcart.com/image/880/1056/jw6pifk0/t-shirt/e/v/z/m-61ywn-lewel-original-imafgxd7dfg7uub2.jpeg?q=90";
+
+  const {
+    moveLens,
+    imgDimesions,
+    lensDimensions,
+    previewLensDimensions,
+    previewImgDimensions,
+    imgContainerDimesions
+  } = useImageZoom({
+    meshRef,
+    imgRef,
+    imagePreviewRef,
+    imgHeight,
+    imgWidth,
+    lensHeight,
+    lensWidth,
+    previewLensHeight,
+    img,
+    previewImg
+  });
+  /**
+   * Two images are involved here, user need to have a actual image and
+   * one good quality image with higher resolution
+   */
+
+  return (
+    <div className="container">
+            
+      <div
+        className="img-main-container"
+        onMouseMove={moveLens}
+        ref={imageContainerRef}
+        style={{
+          ...imgContainerDimesions
+        }}
+      >
+                
+        <div
+          ref={meshRef}
+          className="mesh"
+          style={{
+            ...lensDimensions
+          }}
+        />
+                
+        <img
+          style={{
+            ...imgDimesions
+          }}
+          ref={imgRef}
+          alt="test"
+          src={img}
+        />
+              
+      </div>
+            
+      <div
+        className="img-preview-section-container" // ref={imagePreviewRefContainer}
+        style={{
+          ...previewLensDimensions
+        }}
+      >
+                
+        <img
+          ref={imagePreviewRef}
+          alt="test-preview"
+          src={previewImg}
+          style={{
+            ...previewImgDimensions
+          }}
+          className="img-preview-section"
+        />
+              
+      </div>
+          
+    </div>
+  );
+}
+
+/**
+ * Try to use both the types of image zoom
+ * DefaultZoomApp : where you get the default zoom UI and also customizable
+ * AppWithZoomCustomization: where user want to take control of different ui elements
+ */
+ReactDOM.render(<AppWithZoomCustomization />, document.getElementById("root"));
+```
