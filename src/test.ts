@@ -1,7 +1,11 @@
-import ExampleComponent from './'
+/**
+ * @jest-environment jsdom
+ */
+import React from "react";
+import useImageZoom from "./index";
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+describe("useImageZoom", () => {
+  it("useImageZoom should be defined", () => {
+    expect(useImageZoom).toBeDefined();
+  });
+});
