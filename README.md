@@ -24,7 +24,7 @@ Before we see the usage of this library, lets understand the various values retu
 
 Let's see the jsx needed to use this hook.
 
-```jsx
+````jsx
 <div onMouseMove={moveLens} style={{ ...imgContainerDimesions }}>
   <div ref="{meshRefCallback}" style={{...lensDimensions }} />
   <img
@@ -48,7 +48,7 @@ Let's see the jsx needed to use this hook.
 </div>
 
 
-```
+```javascript
 
 Following are the segregation of properties based on different element
 
@@ -71,17 +71,17 @@ Following are the segregation of properties based on different element
 5. Preview Lens
    previewLensDimensions
 
-```javascript
+````
 
-Let's  see it visually
+Let's see it visually
 
 ![Pictorial representation](images/explanation.png)
 
+1. It is fully customizable, as implementing component is in consumer's control.
 
 Customisation:
 
-1. It is fully customizable, as implementing component is in  consumer's control.
-
+```javascript
 /**
  * Example of default view
  */
@@ -104,9 +104,7 @@ function DefaultZoomApp() {
   const previewImg =
     "https://rukminim1.flixcart.com/image/880/1056/jw6pifk0/t-shirt/e/v/z/m-61ywn-lewel-original-imafgxd7dfg7uub2.jpeg?q=90";
 
-  const {
-    DefaultView
-  } = useImageZoom({
+  const { DefaultView } = useImageZoom({
     imgHeight,
     imgWidth,
     lensHeight,
