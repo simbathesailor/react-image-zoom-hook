@@ -24,35 +24,34 @@ Before we see the usage of this library, lets understand the various values retu
 
 Let's see the jsx needed to use this hook.
 
-```html
-<div onMouseMove="{moveLens}" style="{{" ...imgContainerDimesions }}>
-  <div ref="{meshRefCallback}" style="{{" ...lensDimensions }} />
+```jsx
+<div onMouseMove={moveLens} style={{ ...imgContainerDimesions }}>
+  <div ref="{meshRefCallback}" style={{...lensDimensions }} />
   <img
-    style="{{"
+    style={{
     ...imgDimesions
     }}
-    ref="{imgRefCallback}"
+    ref={imgRefCallback}
     alt="test"
     src="{img}"
   />
 </div>
-<div style="{{" ...previewLensDimensions }}>
+<div style={{ ...previewLensDimensions }}>
   <img
     ref="{imagePreviewRefCallback}"
     alt="test-preview"
     src="{previewImg}"
-    style="{{"
+    style={{
     ...previewImgDimensions
     }}
   />
 </div>
-```
 
-Let see visually what this l
+
+```
 
 Following are the segregation of properties based on different element
 
-````
 1. Image Container
    moveLens,
    imgContainerDimesions,
@@ -72,17 +71,17 @@ Following are the segregation of properties based on different element
 5. Preview Lens
    previewLensDimensions
 
+```javascript
+
 Let's  see it visually
 
-![Component Instances](images/explanation.png)
+![Pictorial representation](images/explanation.png)
 
 
 Customisation:
 
 1. It is fully customizable, as implementing component is in  consumer's control.
 
-
-```javascript
 /**
  * Example of default view
  */
@@ -221,7 +220,7 @@ function AppWithZoomCustomization() {
  * AppWithZoomCustomization: where user want to take control of different ui elements
  */
 ReactDOM.render(<AppWithZoomCustomization />, document.getElementById("root"));
-````
+```
 
 ```javascript
 
