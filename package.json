@@ -1,6 +1,6 @@
 {
   "name": "react-image-zoom-hook",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Image zoom react hook(Work in progress)",
   "author": "simbathesailor",
   "license": "MIT",
@@ -50,5 +50,11 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "image-zoom",
+    "image zoom",
+    "react",
+    "react hook"
   ]
 }
