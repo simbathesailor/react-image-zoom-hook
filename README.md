@@ -2,7 +2,7 @@
 
 ![Github Actions Test | simbathesailor/react-image-zoom-hook](https://github.com/simbathesailor/react-image-zoom-hook/workflows/Test/badge.svg)
 
-One Paragraph of project description goes here
+<img src="images/demo.gif"></img>
 
 ### Installing
 
