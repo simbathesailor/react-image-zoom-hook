@@ -71,17 +71,21 @@ Following are the segregation of properties based on different element
 5. Preview Lens
    previewLensDimensions
 
-````
+```
+
+
 
 Let's see it visually
 
 ![Pictorial representation](images/explanation.png)
 
-1. It is fully customizable, as implementing component is in consumer's control.
+
 
 Customisation:
 
-```javascript
+1. It is fully customizable, as implementing component is in consumer's control.
+
+
 /**
  * Example of default view
  */
@@ -218,6 +222,7 @@ function AppWithZoomCustomization() {
  * AppWithZoomCustomization: where user want to take control of different ui elements
  */
 ReactDOM.render(<AppWithZoomCustomization />, document.getElementById("root"));
+
 ```
 
 ```javascript
@@ -286,3 +291,4 @@ See also the list of [contributors](https://github.com/your/project/contributors
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+````
