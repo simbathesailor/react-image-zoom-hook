@@ -29,95 +29,42 @@ Before we see the usage of this library, lets understand the various values retu
 Let's see the jsx needed to use this hook.
 
 ```jsx
+<>
+  <div onMouseMove={moveLens} style={{ ...imgContainerDimesions }}>
+    <div ref="{meshRefCallback}" style={{ ...lensDimensions }} />
 
-<div  onMouseMove={moveLens}  style={{ ...imgContainerDimesions }}>
+    <img
+      style={{
+        ...imgDimesions
+      }}
+      ref={imgRefCallback}
+      alt="test"
+      src="{img}"
+    />
+  </div>
 
-<div  ref="{meshRefCallback}"  style={{...lensDimensions }} />
-
-<img
-
-style={{
-
-...imgDimesions
-
-}}
-
-ref={imgRefCallback}
-
-alt="test"
-
-src="{img}"
-
-/>
-
-</div>
-
-<div  style={{ ...previewLensDimensions }}>
-
-<img
-
-ref="{imagePreviewRefCallback}"
-
-alt="test-preview"
-
-src="{previewImg}"
-
-style={{
-
-...previewImgDimensions
-
-}}
-
-/>
-
-</div>
+  <div style={{ ...previewLensDimensions }}>
+    <img
+      ref="{imagePreviewRefCallback}"
+      alt="test-preview"
+      src="{previewImg}"
+      style={{
+        ...previewImgDimensions
+      }}
+    />
+  </div>
+</>
 ```
-
-```javascript
 
 Following are the segregation of properties based on different element
 
-
-
-1. Image Container
-
-moveLens,
-
-imgContainerDimesions,
-
-
-
-2. Lens or Mesh
-
-lensDimensions,
-
-meshRefCallback,
-
-
-
-3. Image
-
-imgDimesions
-
-imgRefCallback
-
-
-
-4. Preview Image
-
-imagePreviewRefCallback
-
-previewImgDimensions
-
-
-
-5. Preview Lens
-
-previewLensDimensions
-
-
-
-```
+| Element         | Attribute                                     |
+| --------------- | --------------------------------------------- |
+| Image Container | moveLens, imgContainerDimesions               |
+| Lens or Mesh    | lensDimensions, meshRefCallback               |
+| Image           | imgDimesions, imgRefCallback                  |
+| Preview Image   | imagePreviewRefCallback, previewImgDimensions |
+| Preview Lens    | previewLensDimensions                         |
 
 Let's see it visually
 
