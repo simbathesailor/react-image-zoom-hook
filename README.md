@@ -1,4 +1,4 @@
-# Image zoom react hook(Work in progress)
+# Image zoom react hook
 
 ![Github Actions Test | simbathesailor/react-image-zoom-hook](https://github.com/simbathesailor/react-image-zoom-hook/workflows/Test/badge.svg)
 
