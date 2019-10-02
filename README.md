@@ -339,63 +339,9 @@ function AppWithZoomCustomization() {
 ReactDOM.render(<AppWithZoomCustomization />, document.getElementById("root"));
 ```
 
-```typescript
+![Result attributes types](images/result-type-zoom-hook.png)
 
-moveLens: (event: React.MouseEvent<any, MouseEvent>) => void;
-
-imgContainerDimesions: {
-
-height: string;
-
-width: string;
-
-position: "relative";
-
-};
-
-imgDimesions: {
-
-height: string;
-
-width: string;
-
-};
-
-lensDimensions: {
-
-height: string;
-
-width: string;
-
-};
-
-previewLensDimensions: {
-
-height: string;
-
-width: string;
-
-overflow: string;
-
-};
-
-previewImgDimensions: {
-
-height: string;
-
-width: string;
-
-};
-
-DefaultView: JSX.Element;
-
-imgRefCallback: (node: any) => void;
-
-meshRefCallback: (node: any) => void;
-
-imagePreviewRefCallback: (node: any) => void;
-
-```
+[Gist for types above](https://gist.github.com/simbathesailor/66e1a8db597703f2a34868998c3d9f91)
 
 ## Running the tests
 
