@@ -12,7 +12,7 @@ If using npm, Run
 
 ```javascript
 
-npm  install  --save  react-image-zoom-hook
+npm install --save react-image-zoom-hook
 
 ```
 
@@ -20,7 +20,7 @@ If using yarn , Run
 
 ```javascript
 
-yarn  add  react-image-zoom-hook
+yarn add react-image-zoom-hook
 
 ```
 
@@ -289,6 +289,8 @@ function AppWithZoomCustomization() {
 ReactDOM.render(<AppWithZoomCustomization />, document.getElementById("root"));
 ```
 
+Type interface
+
 ![Result attributes types](images/result-type-zoom-hook.png)
 
 [Gist for types above](https://gist.github.com/simbathesailor/66e1a8db597703f2a34868998c3d9f91)
@@ -311,7 +313,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-- **simbathesailor** - _Initial work_ - [PurpleBooth](https://github.com/simbathesailor)
+**simbathesailor**[PurpleBooth](https://github.com/simbathesailor)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -323,6 +325,8 @@ https://codesandbox.io/s/useimagezoom-ttx47
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-```
+## Contributors
 
-```
+Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
+
+<table><tr><td  align="center"><a  href="https://github.com/simbathesailor"><img  src="https://avatars2.githubusercontent.com/u/5938110?s=400&u=f94d3ad624faa17c799d7bbd88cf2d2170b26813&v=4"  width="100px;"  alt="Anil kumar chaudhary"/><br /><sub><b>Anil kumar Chaudhary</b></sub></a><br /><a  href="https://github.com/simbathesailor/react-image-zoom-hook/commits?author=simbathesailor"  title="Code">💻</a>  <a  href="#ideas-simbathesailor"  title="Ideas, Planning, & Feedback">🤔</a>  <a  href="#design-simbathesailor"  title="Design">🎨</a>  <a  href="https://github.com/simbathesailor/react-image-zoom-hook/commits?author=simbathesailor"  title="Documentation">📖</a>  <a  href="https://github.com/simbathesailor/react-image-zoom-hook/issues/created_by/simbathesailor"  title="Bug reports">🐛</a></td></tr></table>
