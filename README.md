@@ -26,6 +26,8 @@ yarn add react-image-zoom-hook
 
 ## Getting Started
 
+To understand the usage, Let's look at the jsx used to render the above example shown in gif. The jsx structure will remain more or less same of various implementation.
+
 ```jsx
 <>
   <div onMouseMove={moveLens} style={{ ...imgContainerDimesions }}>
@@ -72,6 +74,10 @@ Customisation:
 
 1.  It is fully customisable, as implementing component is in consumer's control.
 2.  Any custom styling can be applied to all the elements mentioned in above table.
+
+### Live Example
+
+[Example customized zoom](https://codesandbox.io/s/young-snow-vbonz)
 
 ## Default Zoom
 
@@ -316,10 +322,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 [simbathesailor](https://github.com/simbathesailor)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-### Links
-
-[Example customized zoom](https://codesandbox.io/s/young-snow-vbonz)
 
 ## License
 
