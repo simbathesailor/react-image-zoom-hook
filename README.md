@@ -84,6 +84,8 @@ Customisation:
 * Example of default view
 
 */
+import React from "react";
+import useImageZoom from "react-image-zoom-hook";
 
 function DefaultZoomApp() {
   /**
@@ -149,9 +151,11 @@ function DefaultZoomApp() {
 ```jsx
 /**
 
-* Example of customised zooming
+ * Example of customised zooming
 
 */
+import React from "react";
+import useImageZoom from "react-image-zoom-hook";
 
 function AppWithZoomCustomization() {
   /**
