@@ -6,7 +6,81 @@ One Paragraph of project description goes here
 
 ### Installing
 
+If using npm, Run
+
+```javascript
+ npm install --save react-image-zoom-hook
+```
+
+If using yarn , Run
+
+```javascript
+  yarn add react-image-zoom-hook
+```
+
 ## Getting Started
+
+Before we see the usage of this library, lets understand the various values returned by this hook:
+
+Let's see the jsx needed to use this hook.
+
+```html
+<div onMouseMove="{moveLens}" style="{{" ...imgContainerDimesions }}>
+  <div ref="{meshRefCallback}" style="{{" ...lensDimensions }} />
+  <img
+    style="{{"
+    ...imgDimesions
+    }}
+    ref="{imgRefCallback}"
+    alt="test"
+    src="{img}"
+  />
+</div>
+<div style="{{" ...previewLensDimensions }}>
+  <img
+    ref="{imagePreviewRefCallback}"
+    alt="test-preview"
+    src="{previewImg}"
+    style="{{"
+    ...previewImgDimensions
+    }}
+  />
+</div>
+```
+
+Let see visually what this l
+
+Following are the segregation of properties based on different element
+
+````
+1. Image Container
+   moveLens,
+   imgContainerDimesions,
+
+2. Lens or Mesh
+   lensDimensions,
+   meshRefCallback,
+
+3. Image
+   imgDimesions
+   imgRefCallback
+
+4. Preview Image
+   imagePreviewRefCallback
+   previewImgDimensions
+
+5. Preview Lens
+   previewLensDimensions
+
+Let's  see it visually
+
+![Component Instances](images/explanation.png)
+
+
+Customisation:
+
+1. It is fully customizable, as implementing component is in  consumer's control.
+
 
 ```javascript
 /**
@@ -32,12 +106,6 @@ function DefaultZoomApp() {
     "https://rukminim1.flixcart.com/image/880/1056/jw6pifk0/t-shirt/e/v/z/m-61ywn-lewel-original-imafgxd7dfg7uub2.jpeg?q=90";
 
   const {
-    // moveLens,
-    // imgDimesions,
-    // lensDimensions,
-    // previewLensDimensions,
-    // previewImgDimensions,
-    // imgContainerDimesions,
     DefaultView
   } = useImageZoom({
     imgHeight,
@@ -153,6 +221,37 @@ function AppWithZoomCustomization() {
  * AppWithZoomCustomization: where user want to take control of different ui elements
  */
 ReactDOM.render(<AppWithZoomCustomization />, document.getElementById("root"));
+````
+
+```javascript
+
+moveLens: (event: React.MouseEvent<any, MouseEvent>) => void;
+    imgContainerDimesions: {
+        height: string;
+        width: string;
+        position: "relative";
+    };
+    imgDimesions: {
+        height: string;
+        width: string;
+    };
+    lensDimensions: {
+        height: string;
+        width: string;
+    };
+    previewLensDimensions: {
+        height: string;
+        width: string;
+        overflow: string;
+    };
+    previewImgDimensions: {
+        height: string;
+        width: string;
+    };
+    DefaultView: JSX.Element;
+    imgRefCallback: (node: any) => void;
+    meshRefCallback: (node: any) => void;
+    imagePreviewRefCallback: (node: any) => void;
 ```
 
 ## Running the tests

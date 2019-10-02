@@ -16,7 +16,7 @@ as the original image
 Need to translate in horizontal by the ratio of imagePreview width / img width 
 Same translate in vertical by the ration of imagePreview height / img height
 **/
-import "./styles.css";
+// import "./styles.css";
 
 interface IStringKeyObj {
   [key: string]: any;
@@ -49,7 +49,11 @@ const DefaultImgPreview = ({
   imagePreviewRefCallback
 }: IDefaultImgPreview) => {
   return (
-    <>
+    <div
+      style={{
+        position: "relative"
+      }}
+    >
       <div
         className="img-main-container"
         onMouseMove={moveLens}
@@ -81,9 +85,12 @@ const DefaultImgPreview = ({
         />
       </div>
       <div
-        // className="img-preview-section-container"
+        className="img-preview-section-container"
         // ref={imagePreviewRefContainer}
         style={{
+          position: "absolute",
+          left: "106%",
+          top: 0,
           ...previewLensDimensions
         }}
       >
@@ -97,7 +104,7 @@ const DefaultImgPreview = ({
           className="img-preview-section"
         />
       </div>
-    </>
+    </div>
   );
 };
 interface IOptions {
@@ -127,7 +134,6 @@ function useImageZoom({
     imgElemInState,
     setimgElemInState
   ] = React.useState<HTMLImageElement | null>(null);
-  console.log("I rebuilt on change");
   const [
     meshElemInState,
     setmeshElemInState
