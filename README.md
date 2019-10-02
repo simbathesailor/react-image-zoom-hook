@@ -1,6 +1,6 @@
 # Image zoom react hook
 
-![Github Actions Test | simbathesailor/react-image-zoom-hook](https://github.com/simbathesailor/react-image-zoom-hook/workflows/Test/badge.svg)
+![Github Actions Test | simbathesailor/react-image-zoom-hook](https://github.com/simbathesailor/react-image-zoom-hook/workflows/Test/badge.svg) [![npm version](https://badge.fury.io/js/react-image-zoom-hook.svg)](https://badge.fury.io/js/react-image-zoom-hook)
 
 <p align="center">
   <img src="images/demo.gif"></img>
