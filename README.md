@@ -26,10 +26,6 @@ yarn  add  react-image-zoom-hook
 
 ## Getting Started
 
-Before we see the usage of this library, lets understand the various values returned by this hook:
-
-Let's see the jsx needed to use this hook.
-
 ```jsx
 <>
   <div onMouseMove={moveLens} style={{ ...imgContainerDimesions }}>
@@ -58,9 +54,13 @@ Let's see the jsx needed to use this hook.
 </>
 ```
 
+Let's see the visual reperesentation of the layout described above in jsx
+
+![Pictorial  representation](images/explanation.png)
+
 Following are the segregation of properties based on different element
 
-| Element         | Attribute                                     |
+| Element         | Attributes returned by Hook                   |
 | --------------- | --------------------------------------------- |
 | Image Container | moveLens, imgContainerDimesions               |
 | Lens or Mesh    | lensDimensions, meshRefCallback               |
@@ -68,13 +68,10 @@ Following are the segregation of properties based on different element
 | Preview Image   | imagePreviewRefCallback, previewImgDimensions |
 | Preview Lens    | previewLensDimensions                         |
 
-Let's see it visually
-
-![Pictorial  representation](images/explanation.png)
-
 Customisation:
 
 1.  It is fully customisable, as implementing component is in consumer's control.
+2.  Any custom styling can be applied to all the elements mentioned in above table.
 
 ## Default Zoom
 
@@ -301,16 +298,6 @@ ReactDOM.render(<AppWithZoomCustomization />, document.getElementById("root"));
 ```javascript
 
 yarn run test
-
-```
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-
-Give  an  example
 
 ```
 
