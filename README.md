@@ -319,7 +319,7 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 ### Links
 
-![Example customized zoom](https://codesandbox.io/s/young-snow-vbonz)
+[Example customized zoom](https://codesandbox.io/s/young-snow-vbonz)
 
 ## License
 
