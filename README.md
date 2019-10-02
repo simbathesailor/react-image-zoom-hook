@@ -321,6 +321,8 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 [Example customized zoom](https://codesandbox.io/s/young-snow-vbonz)
 
+<iframe src="https://codesandbox.io/embed/young-snow-vbonz?codemirror=1" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
