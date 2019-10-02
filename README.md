@@ -313,7 +313,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-**simbathesailor**[PurpleBooth](https://github.com/simbathesailor)
+[simbathesailor](https://github.com/simbathesailor)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
