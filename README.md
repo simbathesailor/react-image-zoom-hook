@@ -2,9 +2,9 @@
 
 ![Github Actions Test | simbathesailor/react-image-zoom-hook](https://github.com/simbathesailor/react-image-zoom-hook/workflows/Test/badge.svg)
 
-<p style="display: flex;justify-content: center;">
-<img src="images/demo.gif"></img>
-</p>
+<div style="display: flex;justify-content: center;">
+  <img src="images/demo.gif"></img>
+</div>
 
 ### Installing
 
