@@ -33,7 +33,7 @@ Let's see the jsx needed to use this hook.
 ```jsx
 <>
   <div onMouseMove={moveLens} style={{ ...imgContainerDimesions }}>
-    <div ref="{meshRefCallback}" style={{ ...lensDimensions }} />
+    <div ref={meshRefCallback} style={{ ...lensDimensions }} />
 
     <img
       style={{
@@ -41,15 +41,15 @@ Let's see the jsx needed to use this hook.
       }}
       ref={imgRefCallback}
       alt="test"
-      src="{img}"
+      src={img}
     />
   </div>
 
   <div style={{ ...previewLensDimensions }}>
     <img
-      ref="{imagePreviewRefCallback}"
+      ref={imagePreviewRefCallback}
       alt="test-preview"
-      src="{previewImg}"
+      src={previewImg}
       style={{
         ...previewImgDimensions
       }}
